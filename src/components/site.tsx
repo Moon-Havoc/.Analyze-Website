@@ -75,7 +75,7 @@ export function Header() {
     <motion.button className="menu-toggle" onClick={() => setOpen(!open)} aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} whileTap={reduced ? undefined : { scale: 0.92 }} transition={{ duration: reduced ? 0 : 0.16 }}>{open ? <X /> : <Menu />}</motion.button>
     <nav className={open ? "main-nav is-open" : "main-nav"} aria-label="Main navigation">
       {nav.map(([label, href]) => <Link key={href} href={href} className={pathname === href ? "nav-link active" : "nav-link"} aria-current={pathname === href ? "page" : undefined} onClick={() => setOpen(false)}><span>{label}</span>{pathname === href && <motion.span className="nav-indicator" aria-hidden="true" layoutId="nav-indicator" transition={{ duration: reduced ? 0 : 0.28, ease: [0.22, 1, 0.36, 1] }}/>}</Link>)}
-      <Link href="/contact" className="nav-cta" onClick={() => setOpen(false)}>Start an inquiry <ArrowUpRight size={15} /></Link>
+      <a href={discordInviteUrl} className="nav-cta" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Start an inquiry <ArrowUpRight size={15} /></a>
     </nav>
   </div></header>;
 }
