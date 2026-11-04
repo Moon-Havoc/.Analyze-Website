@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ShieldCheck, Search, FileText } from "lucide-react";
 import { CTA, Eyebrow, PageHero, Reveal } from "@/components/site";
 
@@ -13,14 +14,14 @@ const executives = [
     name: "Dior",
     role: "Executive Board · Executive",
     description: "Executive leadership at .Analyze.",
-    monogram: "D",
+    image: "/images/team/dior.webp",
   },
   {
     id: "02",
     name: "Nova",
     role: "Executive Board · Co-Executive",
     description: "Retired Emergency Response: Liberty County (ER:LC) Investigator Specialist.",
-    monogram: "N",
+    image: "/images/team/nova.webp",
   },
 ];
 
@@ -41,7 +42,7 @@ export default function Team() {
       <div className="executive-heading"><Eyebrow>Executive board</Eyebrow><h2>Leadership team</h2></div>
       <div className="executive-grid">{executives.map((person, i) => <Reveal key={person.id} delay={i * .07}>
         <article className="team-card executive-card">
-          <div className="team-card-top"><span className="executive-mark" aria-hidden="true">{person.monogram}</span><span>EXECUTIVE / {person.id}</span></div>
+          <div className="team-card-top"><Image className="executive-avatar" src={person.image} alt={`${person.name}’s ER:LC community avatar`} width={54} height={54} /><span>EXECUTIVE / {person.id}</span></div>
           <div className="team-card-content"><span className="team-role">{person.role}</span><h2>{person.name}</h2><p>{person.description}</p></div>
         </article>
       </Reveal>)}</div>

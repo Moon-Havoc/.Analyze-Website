@@ -126,6 +126,6 @@ a:focus-visible,button:focus-visible{outline:2px solid #a8cdea;outline-offset:4p
 .executive-heading h2{font-size:clamp(28px,3vw,38px);letter-spacing:-.05em;line-height:1.15;margin:13px 0 0}
 .executive-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
 .executive-card{min-height:230px;display:flex;flex-direction:column;justify-content:space-between}
-.executive-mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid #66839d66;background:linear-gradient(145deg,#1c3044,#0d1926);color:#c3ddf1;font-size:17px;font-weight:600;letter-spacing:-.04em}
+.executive-avatar{width:54px;height:54px;display:block;object-fit:cover;border:2px solid #66839d99;border-radius:50%;background:#101a25}
 .executive-card .team-card-content{padding-top:24px}
 @media(max-width:800px){.executive-grid{grid-template-columns:1fr}}
