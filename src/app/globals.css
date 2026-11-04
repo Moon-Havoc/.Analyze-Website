@@ -119,3 +119,13 @@ a:focus-visible,button:focus-visible{outline:2px solid #a8cdea;outline-offset:4p
 @keyframes hero-orbit-centered-reverse{to{transform:translate(-50%,-50%) rotate(-360deg)}}
 @media(max-width:800px){.hero-watermark{width:72vw;right:1%}.hero-orbit{left:63%}.hero-orbit-outer{width:88vw}.hero-orbit-inner{width:76vw}}
 @media(prefers-reduced-motion:reduce){.hero-orbit-outer,.hero-orbit-inner{animation:none}}
+
+/* Executive profiles and role placeholders on the leadership page. */
+.team-executives{background:#080e17;padding-bottom:38px}
+.executive-heading{margin-bottom:24px}
+.executive-heading h2{font-size:clamp(28px,3vw,38px);letter-spacing:-.05em;line-height:1.15;margin:13px 0 0}
+.executive-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.executive-card{min-height:230px;display:flex;flex-direction:column;justify-content:space-between}
+.executive-mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid #66839d66;background:linear-gradient(145deg,#1c3044,#0d1926);color:#c3ddf1;font-size:17px;font-weight:600;letter-spacing:-.04em}
+.executive-card .team-card-content{padding-top:24px}
+@media(max-width:800px){.executive-grid{grid-template-columns:1fr}}
